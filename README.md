@@ -1,12 +1,12 @@
-#Introduction to Programming
+# Introduction to Programming
 
-##Practical 8: Inheritance
+## Practical 8: Inheritance
 
 ## Instructions
 
 This practical focuses on __inheritance__ and __class hierarchy__. You will need to download the DoME example, which follows chapter 8 of the bluej book.
 
-###Level 1
+### Level 1
 
 1. __Implementation.__ The DoME project, using the source code provided.
 	* Look carefully at the DoME example provided. Add some DVDs to the database and then
@@ -27,7 +27,7 @@ Instance methods are provided for obtaining the price before and after tax for a
 for obtaining a printable _String_ representation.
 
 
-###Level 2
+### Level 2
 
 1. __Implementation.__ There is a flaw in the design of the DoME project. For example
 `playingTime` should not be used for for a video game. Change the design and implementation to
