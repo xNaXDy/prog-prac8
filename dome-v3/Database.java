@@ -51,7 +51,7 @@ public class Database
      */
     public void createDatabase()
     {
-        CD item ;
+        Item item ;
         
         item = new CD( "Lungs", "Florence", 10, 100 ) ;
         item.setComment("Breathes easily" ) ;
@@ -60,6 +60,14 @@ public class Database
         item = new CD( "My Worlds", "Justin", 10, 100 ) ;
         item.setComment("Why ???" ) ;
         this.addItem( item ) ;
+        
+        item = new DVD("Explosions", "Michael Bay", 120);
+        item.setComment("Lots of them.");
+        this.addItem(item);
+        
+        item = new VideoGame("Banjo Tooie", "Nintendo", 120);
+        item.setComment("Part 3 coming soon.");
+        this.addItem(item);
         
         
     }

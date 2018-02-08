@@ -29,4 +29,10 @@ public class DVD extends Item
     {
         return director;
     }
+    
+    public void print()
+    {
+    	super.print();
+    	System.out.println("director: " + director);
+    }
 }

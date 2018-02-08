@@ -71,6 +71,6 @@ public class Item
         } else {
             System.out.println("::NotGotIt");
         }
-        System.out.println("Comment:" + comment);
+        System.out.println("Comment: " + comment);
     }
 }
