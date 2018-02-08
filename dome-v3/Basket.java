@@ -16,11 +16,15 @@ public class Basket
 	
 	public void printBasket()
 	{
+		System.out.println("-------------------");
+		System.out.println("  Basket Contents");
+		System.out.println("-------------------\n");
 		for(int i = 0; i < items.size(); i++)
 		{
 			items.get(i).print();
+			System.out.println();
 		}
-		
+		System.out.println("-------------------\n");
 		System.out.println("Total Price (ex. VAT): $" + getBasketPriceBeforeVAT());
 		System.out.println("Total Price (inc. VAT): $" + getBasketPriceAfterVAT());
 	}

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The database class provides a facility to store entertainment
@@ -42,6 +43,13 @@ public class Database
             item.print();
             System.out.println();   // empty line between items
         }
+        
+        System.out.println("-------------------\n");
+    }
+    
+    public List<Item> getItems()
+    {
+    	return items;
     }
     
     
@@ -53,11 +61,11 @@ public class Database
     {
         Item item ;
         
-        item = new CD( "F100", "Lungs", "Florence", "", 10, 10, 100, 0.19 ) ;
+        item = new CD( "F100", "Lungs", "Florence", "", 10, 100, 10, 0.19 ) ;
         item.setComment("Breathes easily" ) ;
         this.addItem( item ) ;
         
-        item = new CD( "F101", "My Worlds", "Justin", "", 10, 10, 100, 0.19 ) ;
+        item = new CD( "F101", "My Worlds", "Justin", "", 10, 100, 10, 0.19 ) ;
         item.setComment("Why ???" ) ;
         this.addItem( item ) ;
         
