@@ -53,19 +53,19 @@ public class Database
     {
         Item item ;
         
-        item = new CD( "Lungs", "Florence", 10, 100 ) ;
+        item = new CD( "F100", "Lungs", "Florence", "", 10, 10, 100, 0.19 ) ;
         item.setComment("Breathes easily" ) ;
         this.addItem( item ) ;
         
-        item = new CD( "My Worlds", "Justin", 10, 100 ) ;
+        item = new CD( "F101", "My Worlds", "Justin", "", 10, 10, 100, 0.19 ) ;
         item.setComment("Why ???" ) ;
         this.addItem( item ) ;
         
-        item = new DVD("Explosions", "Michael Bay", 120);
+        item = new DVD("F102", "Explosions", "Michael Bay", "",  120, 49, 0.19);
         item.setComment("Lots of them.");
         this.addItem(item);
         
-        item = new VideoGame("Banjo Tooie", "Nintendo", 120);
+        item = new VideoGame("F103", "Banjo Tooie", "Nintendo", "", 120, 19, 0.19);
         item.setComment("Part 3 coming soon.");
         this.addItem(item);
         

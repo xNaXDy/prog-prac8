@@ -5,9 +5,9 @@
  * @author Michael Kolling and David J. Barnes
  * @version 2008.03.30
  */
-public class CD extends Item
+public class CD extends PlayableMedium
 {
-    private String artist;
+	private String artist;
     private int numberOfTracks;
 
     /**
@@ -17,13 +17,13 @@ public class CD extends Item
      * @param tracks The number of tracks on the CD.
      * @param time The playing time of the CD.
      */
-    public CD(String theTitle, String theArtist, int tracks, int time)
+    public CD(String referenceID,  String title, String artist, String description, int playtime, int numberOfTracks, int price, double vat)
     {
-        super(theTitle, time);
-        artist = theArtist;
-        numberOfTracks = tracks;
-    }
-
+  		super(referenceID, title, description, playtime, price, vat);
+  		this.numberOfTracks = numberOfTracks;
+  		this.artist = artist;
+  	}
+    
     /**
      * @return The artist for this CD.
      */

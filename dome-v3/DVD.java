@@ -6,9 +6,9 @@
  * @author Michael Kolling and David J. Barnes
  * @version 2008.03.30
  */
-public class DVD extends Item 
+public class DVD extends PlayableMedium 
 {
-    private String director;
+	private String director;
 
     /**
      * Constructor for objects of class DVD
@@ -16,11 +16,11 @@ public class DVD extends Item
      * @param theDirector The director of this DVD.
      * @param time The running time of the main feature.
      */
-    public DVD(String theTitle, String theDirector, int time)
-    {
-        super(theTitle, time);
-        director = theDirector;
-    }
+	public DVD(String referenceID, String title, String director, String description, int playtime, int price, double vat)
+	{
+		super(referenceID, title, description, playtime, price, vat);
+		this.director = director;
+	}
 
     /**
      * @return The director for this DVD.

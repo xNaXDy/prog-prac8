@@ -6,10 +6,14 @@
  * @author Michael Kolling and David J. Barnes
  * @version 2008.03.30
  */
-public class Item
+public abstract class Item
 {
+	private String referenceID;
+	private String description;
+	private double vat;
+	private int price;
+	
     private String title;
-    private int playingTime;
     private boolean gotIt;
     private String comment;
 
@@ -18,10 +22,13 @@ public class Item
      * @param theTitle The title of this item.
      * @param time The running time of this item.
      */
-    public Item(String theTitle, int time)
+    public Item(String referenceID, String title, String description, int price, double vat)
     {
-        title = theTitle;
-        playingTime = time;
+    	this.title = title;
+        this.referenceID = referenceID;
+        this.description = description;
+        this.vat = vat;
+        this.price = price;
         gotIt = false;
         comment = "";
     }
@@ -59,18 +66,57 @@ public class Item
     {
         return gotIt;
     }
+    
+    public String getReferenceID()
+    {
+    	return referenceID;
+    }
+    
+    public String getDescription()
+    {
+    	return description;
+    }
+    
+    public double getVAT()
+    {
+    	return vat;
+    }
+    
+    public int getPriceBeforeVAT()
+	{
+		return getPriceBeforeVAT(1);
+	}
+	
+	public int getPriceAfterVAT()
+	{
+		return getPriceAfterVAT(1);
+	}
+	
+	public int getPriceBeforeVAT(int quantity)
+	{
+		return price * quantity;
+	}
+	
+	public int getPriceAfterVAT(int quantity)
+	{
+		return getPriceBeforeVAT(quantity) + (int)Math.round((double)getPriceBeforeVAT(quantity) * getVAT());
+	}
 
     /**
      * Print details about this item to the text terminal.
      */
     public void print()
     {
-        System.out.print("title: " + title + " (" + playingTime + " mins)");
+        System.out.print("title: " + title + " (ID: " + referenceID + ")");
         if(gotIt) {
             System.out.println("::GotIt");
         } else {
             System.out.println("::NotGotIt");
         }
+        System.out.println("Description: " + description);
         System.out.println("Comment: " + comment);
+        System.out.println("Price Per Unit (ex. VAT): $" + getPriceBeforeVAT());
+        System.out.println("Price Per Unit (inc. VAT): $" + getPriceAfterVAT());
+        System.out.println("VAT: " + (int)(getVAT() * 100) + "%");
     }
 }

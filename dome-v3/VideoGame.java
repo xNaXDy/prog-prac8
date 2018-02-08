@@ -1,11 +1,11 @@
 
-public class VideoGame extends Item
+public class VideoGame extends PlayableMedium
 {
 	private String publisher;
 	
-	public VideoGame(String theTitle, String publisher, int time)
+	public VideoGame(String referenceID, String theTitle, String publisher, String description, int playtime, int price, double vat)
 	{
-		super(theTitle, time);
+		super(referenceID, theTitle, description, playtime, price, vat);
 		this.publisher = publisher;
 	}
 	
