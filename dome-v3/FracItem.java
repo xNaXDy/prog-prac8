@@ -1,5 +1,5 @@
 
-public abstract class FracItem extends Item
+public class FracItem extends Item
 {
 	private String unitMeasure;
 	public FracItem(String referenceID, String title, String description, int price, String unitMeasure, double vat)
