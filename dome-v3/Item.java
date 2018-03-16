@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * The Item class represents a multi-media item.
  * Information about the item is stored and can be retrieved.
@@ -6,7 +8,7 @@
  * @author Michael Kolling and David J. Barnes
  * @version 2008.03.30
  */
-public abstract class Item
+public abstract class Item implements Serializable
 {
 	private String referenceID;
 	private String description;

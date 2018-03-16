@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @author Michael Kolling and David J. Barnes
  * @version 2008.03.30
  */
-public class Database
+public class Database implements Serializable
 {
     private ArrayList<Item> items;
 
@@ -78,5 +79,16 @@ public class Database
         this.addItem(item);
         
         
+    }
+    
+    public boolean removeItem(int id)
+    {
+    	if(id < items.size())
+    	{
+    		items.remove(id);
+    		return true;
+    	}
+    	
+    	return false;
     }
 }
